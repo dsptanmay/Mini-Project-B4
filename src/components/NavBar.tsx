@@ -9,7 +9,7 @@ const NavBarComponent = () => {
   const session = useSession();
   const router = useRouter();
   return (
-    <nav className="flex w-full items-center justify-between border-b-2 border-gray-700 p-5 text-xl font-semibold bg-[#2586ed] text-white ">
+    <nav className="flex w-full items-center justify-between border-b-2 border-white p-5 text-xl font-semibold bg-[#2586ed] text-white ">
       <div className="text-2xl">Blockchain Crowdfunding</div>
       <div className="flex flex-row items-center gap-4">
         <Link href={"/about"}>About</Link>
