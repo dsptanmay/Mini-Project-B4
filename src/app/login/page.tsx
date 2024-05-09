@@ -10,7 +10,7 @@ const LoginPage = async () => {
         <form
           action={async () => {
             "use server";
-            await signIn("google", { redirectTo: "/" });
+            await signIn("google", { redirectTo: "/profile" });
           }}
         >
           <button className="bg-black rounded-lg" type="submit">
