@@ -14,7 +14,7 @@ const LoginPage = async () => {
           }}
         >
           <button className="bg-black rounded-lg" type="submit">
-            <span className="bg-gray-100 flex p-4 -translate-x-1 -translate-y-1 hover:-translate-x-2 hover:-translate-y-2 rounded-lg transition-all border-2 border-black text-xl font-semibold items-center justify-center flex-row gap-4">
+            <span className="bg-white flex p-4 -translate-x-1 -translate-y-1 hover:-translate-x-2 hover:-translate-y-2 rounded-lg transition-all border-2 border-black text-xl font-semibold items-center justify-center flex-row gap-4">
               <Image
                 alt="google-logo"
                 src={"https://www.svgrepo.com/show/475656/google-color.svg"}
@@ -22,6 +22,24 @@ const LoginPage = async () => {
                 height={30}
               />
               Sign In With Google
+            </span>
+          </button>
+        </form>
+        <form
+          action={async () => {
+            "use server";
+            await signIn("github", { redirectTo: "/profile" });
+          }}
+        >
+          <button className="bg-black rounded-lg" type="submit">
+            <span className="bg-white flex p-4 -translate-x-1 -translate-y-1 hover:-translate-x-2 hover:-translate-y-2 rounded-lg transition-all border-2 border-black text-xl font-semibold items-center justify-center flex-row gap-4">
+              <Image
+                alt="google-logo"
+                src={"https://www.svgrepo.com/show/35001/github.svg"}
+                width={30}
+                height={30}
+              />
+              Sign In With GitHub
             </span>
           </button>
         </form>
